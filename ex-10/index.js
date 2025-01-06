@@ -11,3 +11,11 @@
 */
 
 const velocitaRenne = [12, 1, 7, 10, 16, 5];
+
+
+function renneStanche(array){
+  const arrayRenneStanche = array.map((renna) => renna < 10 ? true : false )
+  return arrayRenneStanche
+}
+
+console.log(renneStanche(velocitaRenne))
