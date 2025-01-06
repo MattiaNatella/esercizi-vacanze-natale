@@ -18,3 +18,14 @@ const regali = [
   { nome: "Libro", prezzo: 10 },
   { nome: "Giocattolo", prezzo: 20 }
 ];
+
+function calcolaTotale(array){
+  let spesaTotale = 0
+  array.forEach(element => {
+    spesaTotale += element.prezzo
+    
+  });
+  return spesaTotale
+}
+
+console.log('Babbo Natale ha speso ' + calcolaTotale(regali) + '€!!')
