@@ -10,3 +10,15 @@
 */
 
 const desideri = ["bicicletta", "pupazzo", "bicicletta", "cane"];
+
+function generaListaDesideri(array){
+ let desideriUnici = []
+ array.forEach((element)=>{
+  if(!(desideriUnici.includes(element))){
+    desideriUnici.push(element)
+  }
+ })
+ return desideriUnici
+}
+
+console.log(generaListaDesideri(desideri))
