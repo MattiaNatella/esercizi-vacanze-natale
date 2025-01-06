@@ -33,3 +33,15 @@ const citta = [
   "Candynia",
   "Luciaville"
 ];
+
+function aggiungiCitta(array, città){
+  if(array.includes(città)){
+    return
+  } else {
+    array.push(città)
+  }
+}
+
+aggiungiCitta(citta, "Panettoneville")
+
+console.log(citta)
