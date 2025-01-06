@@ -16,3 +16,17 @@
 
 const giorniDicembre = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
 const giorniDicembreIncompleto = [1, 2, 6, 7, 8, 9, 10, 18, 19, 20, 21, 22];
+
+
+function calendarioCompleto(arrayAvvento, arrayCheck){
+ let check = true
+  for(let giorno of arrayAvvento){
+    if(arrayCheck.includes(giorno) === false){
+      check = false
+    }
+
+  }
+  return check
+}
+
+console.log(calendarioCompleto(giorniDicembre, giorniDicembreIncompleto))
