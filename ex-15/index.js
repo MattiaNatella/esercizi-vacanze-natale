@@ -9,3 +9,7 @@
 */
 
 const nomiRenne = ["Comet", "Blitzen", "Rudolph", "Dudu", "Prancer", "Vixen", "Cicibubu", "Dancer"];
+
+const ordinaRenne = (array) => array.sort()
+
+console.log(ordinaRenne(nomiRenne))
