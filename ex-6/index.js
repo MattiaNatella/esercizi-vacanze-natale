@@ -14,4 +14,21 @@
   }
 */
 
+
+
 const palline = ["rosso", "blu", "rosso", "verde", "rosso", "giallo", "blu"];
+
+
+const quantiColori = {
+  "rosso": contaPalline(palline, "rosso"),
+  "blu": contaPalline(palline, "blu"),
+  "verde": contaPalline(palline, "verde"),
+  "giallo": contaPalline(palline, "giallo")
+}
+
+console.log(quantiColori)
+
+function contaPalline(array,colore){
+  const quante = array.filter((element) => element === colore).length
+  return quante
+}
