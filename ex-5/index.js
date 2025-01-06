@@ -9,3 +9,13 @@
 */
 
 const palline = ["rosso", "blu", "rosso", "verde", "rosso", "giallo", "blu"];
+
+let pallineRosse = 0
+
+palline.forEach((pallina) => {
+  if(pallina === "rosso"){
+    pallineRosse++
+  }
+})
+
+console.log(pallineRosse)
