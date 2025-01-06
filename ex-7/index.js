@@ -27,3 +27,11 @@ const elfi = [
   { nome: "Buddy", oreLavorate: 8 },
   { nome: "SamBem", oreLavorate: 2 }
 ];
+
+
+function trovaElfiPigri(array){
+  const elfiPigri = array.filter((elfo) => elfo.oreLavorate < 5)
+  return elfiPigri
+}
+
+console.log(trovaElfiPigri(elfi))
