@@ -52,3 +52,59 @@ const letterine = [
   "Spero in un Natale pieno di cioccolata.",
   "So che non esisti. Gne."
 ];
+
+/*
+1.
+Scrivi una funzione "getLettereBambiniEducati" che 
+restituisca solo le letterine che iniziano iniziano con "Caro Babbo Natale".
+
+Output:
+  [
+    "Caro Babbo Natale, quest'anno vorrei un trenino.",
+    "Caro Babbo Natale, grazie per i regali dello scorso anno!",
+    "Caro Babbo Natale, puoi portarmi una bici rossa?",
+  ];
+  */
+
+
+  function getLettereBambiniEducati(array){
+    const lettereBambiniEducati = array.filter((element) => element.startsWith("Caro Babbo Natale"))
+    return lettereBambiniEducati
+  }
+
+  console.log(getLettereBambiniEducati(letterine))
+
+
+/*
+  2.
+  Scrivi una funzione "smistaLettereBambini" che restituisca un oggetto con le lettere dei bambini educati e maleducati.
+  Un bambino è educato se inizia la letterina con "Caro Babbo Natale", altrimenti è considerato maleducato.
+
+  Output
+    {
+      educati: [
+        "Caro Babbo Natale, quest'anno vorrei un trenino.",
+        "Caro Babbo Natale, grazie per i regali dello scorso anno!",
+        "Caro Babbo Natale, puoi portarmi una bici rossa?",
+      ]
+      maleducati: [
+        "Vorrei un cucciolo da accudire.",
+        "Mi piacerebbe avere un set di colori.",
+        "Spero in un Natale pieno di cioccolata."
+        "So che non esisti. Gne."
+      ]
+    }
+*/
+
+function smistaLettereBambini(array){
+  let educati = []
+  let maleducati = []
+  array.forEach((element) => element.startsWith("Caro Babbo Natale") ? educati.push(element) : maleducati.push(element))
+  const lettereBambini = {
+    educati,
+    maleducati
+  }
+ return lettereBambini
+}
+
+console.log(smistaLettereBambini(letterine))
