@@ -26,3 +26,15 @@ const regali = [
   { nome: "Sedia", prezzo: 15 },
   { nome: "Berretto troppo costoso", prezzo: 58 },
 ];
+
+const regaliSotto20Euro = regali.filter(({prezzo}) => prezzo < 20)
+
+console.log(regaliSotto20Euro)
+
+function filtraRegaliEconomici(array){
+  const {prezzo} = array
+  const arrayFiltrato = array.filter((element) => element.prezzo < 20 )
+  return arrayFiltrato
+}
+
+console.log(filtraRegaliEconomici(regali))
